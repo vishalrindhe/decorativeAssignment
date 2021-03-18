@@ -1,0 +1,26 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">UserId</th>
+        <th scope="col">Id</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let info of infoList">
+        <tr *ngIf= "info.userId == 2 "  (click)="onItemClick( info.userId, info.id)">
+            <!-- <div > -->
+                <td  >
+                    <a>{{ info.userId }}</a>
+                </td>
+                <td> {{ info.id }}</td>
+                <td> {{ info.title }}</td>
+
+            <!-- </div> -->
+        </tr>
+    </tbody>
+</table>
+
+    
+    <button routerLink='/userinfo'>Click</button>
+    <!-- <router-outlet></router-outlet> -->
+    
+    <app-user-info [dataUserId]="userDataId" [dataId]="DataId"  ></app-user-info>

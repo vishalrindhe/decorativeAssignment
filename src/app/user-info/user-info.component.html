@@ -1,0 +1,30 @@
+<p> {{dataUserId*5}} </p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-lg-4 card-margin" *ngFor="let info of infoList">
+            <div *ngIf= "info.userId == dataUserId && info.id == dataId ">
+            <div class="card border-primary card-bg" >
+                <div class="card-header">
+                        <div class="container text-below-textarea">
+                            <span class="card-text text-left" style="display:inline-block;text-align:left;">
+                                UserID:{{info.userId}}                    
+                            </span>
+                            <!-- <span class="card-text text-right" style="display:inline-block;text-align:right;">
+                                <small class="text-muted">ID: {{info.id}}</small>
+                            </span> -->
+                        </div>  
+                </div>
+                <p class="card-title" style="padding: 9%;">{{info.title}}</p>
+                <p class="card-text" style="padding: 9%;">{{info.body}}</p>
+
+
+                <span class="card-footer text-right" style="display:inline-block;text-align:right;">
+                    <small class="text-muted">ID: {{info.id}}</small>
+                </span>        
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     
