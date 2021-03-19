@@ -1,18 +1,15 @@
-{{userData}}
-
-<table class="table table-striped">
-    <thead>
-      <tr>
+<table class="container table table-striped table-bordered table-hover" >
+    <thead class="thead-light">
+      <tr >
         <th scope="col">UserId</th>
         <th scope="col">Id</th>
+        <th scope="col">Title</th>
       </tr>
     </thead>
-    <tbody *ngFor="let info of infoList">
-        <tr *ngIf= "info.userId == 2 " routerLink='/userinfo'  (click)="onItemClick(info)">
+    <tbody *ngFor="let info of Filterarray" >
+        <tr class='hover' (click)="onItemClick(info)">
             <!-- <div > -->
-                <td  >
-                    <a>{{ info.userId }}</a>
-                </td>
+                <td  >{{ info.userId }}</td>
                 <td> {{ info.id }}</td>
                 <td> {{ info.title }}</td>
 
@@ -21,6 +18,7 @@
     </tbody>
 </table>
 <button routerLink='/userinfo' >Click</button>
+<app-form></app-form>
 
 <!-- <button (click)="onButtonClick()" routerLink='/userinfo' >Click</button> -->
     

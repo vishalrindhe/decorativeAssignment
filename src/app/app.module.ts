@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { InteractionService } from './interaction.service';
+import { GlobalConstantsComponent } from './global-constants/global-constants.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserInfoComponent,
     routingComponents,
-    HomepageComponent
+    HomepageComponent,
+    GlobalConstantsComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
