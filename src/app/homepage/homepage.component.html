@@ -1,3 +1,5 @@
+{{userData}}
+
 <table class="table table-striped">
     <thead>
       <tr>
@@ -6,7 +8,7 @@
       </tr>
     </thead>
     <tbody *ngFor="let info of infoList">
-        <tr *ngIf= "info.userId == 2 "  (click)="onItemClick( info.userId, info.id)">
+        <tr *ngIf= "info.userId == 2 " routerLink='/userinfo'  (click)="onItemClick(info)">
             <!-- <div > -->
                 <td  >
                     <a>{{ info.userId }}</a>
@@ -18,9 +20,11 @@
         </tr>
     </tbody>
 </table>
+<button routerLink='/userinfo' >Click</button>
 
+<!-- <button (click)="onButtonClick()" routerLink='/userinfo' >Click</button> -->
     
-    <button routerLink='/userinfo'>Click</button>
+    <!-- <button routerLink='/userinfo' >Click</button> -->
     <!-- <router-outlet></router-outlet> -->
     
-    <app-user-info [dataUserId]="userDataId" [dataId]="DataId"  ></app-user-info>
+    <!-- <app-user-info [userData]="userData"  ></app-user-info> -->

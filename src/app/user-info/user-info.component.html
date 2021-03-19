@@ -1,30 +1,47 @@
-<p> {{dataUserId*5}} </p>
-<div class="container">
+<!-- <p>B: {{userData1}} </p> -->
+<div class="container center">
     <div class="row">
-        <div class="col-sm-6 col-lg-4 card-margin" *ngFor="let info of infoList">
-            <div *ngIf= "info.userId == dataUserId && info.id == dataId ">
+        <div class="col-sm-12 col-lg-12 card-margin" >
+        <!-- <div class="col-sm-12 col-lg-12 card-margin" *ngFor="let info of userList"> -->
+
+            <!-- <div *ngIf= "info.userId == dataUserId && info.id == dataId "> -->
             <div class="card border-primary card-bg" >
                 <div class="card-header">
                         <div class="container text-below-textarea">
-                            <span class="card-text text-left" style="display:inline-block;text-align:left;">
-                                UserID:{{info.userId}}                    
-                            </span>
+                            <h1 class="card-text text-left" style="display:inline-block;text-align:left;">
+                                UserId:
+                                <!-- {{userData.userId}} -->
+                                 <!--{{info.userId}}                     -->
+                                     {{data.userId}}
+                            </h1>
                             <!-- <span class="card-text text-right" style="display:inline-block;text-align:right;">
                                 <small class="text-muted">ID: {{info.id}}</small>
                             </span> -->
                         </div>  
                 </div>
-                <p class="card-title" style="padding: 9%;">{{info.title}}</p>
-                <p class="card-text" style="padding: 9%;">{{info.body}}</p>
+                <h2 class="card-title" style="padding: 9%;">Title: 
+                    <!-- {{userData.title}} -->
+                    <!-- {{info.title}} -->
+                    {{data.title}}
+                </h2>
+                <h3 class="card-text" style="padding: 9%;">Body: 
+                    <!-- {{userData.body}} -->
+                    <!-- {{info.body}} -->
+                        {{data.body}}
+                </h3>
 
 
-                <span class="card-footer text-right" style="display:inline-block;text-align:right;">
-                    <small class="text-muted">ID: {{info.id}}</small>
-                </span>        
+                <h3 class="card-footer text-right" >
+                    <small class="">ID: 
+                        <!-- {{userData.id}} -->
+                        <!-- {{info.id}} -->
+                                {{data.id}}
+                    </small>
+                </h3>        
 
               </div>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
      
